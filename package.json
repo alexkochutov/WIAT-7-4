@@ -1,0 +1,19 @@
+{
+  "name": "jest-puppeteer",
+  "version": "1.0.0",
+  "description": "WIAT 7-4 Homework - Jest + Puppeteer",
+  "main": "gh.test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkochutov/WIAT-7-4.git"
+  },
+  "author": "Aleksandr Kochutov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexkochutov/WIAT-7-4/issues"
+  },
+  "homepage": "https://github.com/alexkochutov/WIAT-7-4#readme"
+}
