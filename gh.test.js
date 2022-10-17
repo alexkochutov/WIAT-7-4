@@ -17,12 +17,12 @@ describe("Github page tests", () => {
     await page.waitForTimeout(1000);
     const title2 = await page.title();
     expect(title2).toEqual('GitHub: Where the world builds software · GitHub');
-  });
+  }, 5000);
 
   test("The first link attribute", async () => {
     const actual = await page.$eval("a", link => link.getAttribute('href') );
     expect(actual).toEqual("#start-of-content");
-  });
+  }, 1500);
 
   test("The page contains Sign in button", async () => {
     const btnSelector = ".btn-mktg.btn-large-mktg.btn-muted-mktg";
@@ -31,5 +31,5 @@ describe("Github page tests", () => {
     });
     const actual = await page.$eval(btnSelector, link => link.textContent);
     expect(actual).toContain("Sign up for free")
-  });
+  }, 1500);
 });
