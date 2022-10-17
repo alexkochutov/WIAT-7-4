@@ -37,35 +37,20 @@ describe("Github page tests", () => {
   }, 3000);
 });
 
-describe("Github Enterprise page tests", () => {
-    beforeEach(async () => {
-        await page.goto("https://github.com/enterprise");
-    }, 10000);
+test("Enterprise page has title'", async () => {
+  await page.goto("https://github.com/enterprise");
+  const title = await page.title();
+  expect(title).toEqual('Enterprise · A smarter way to work together · GitHub');
+}, 5000);
 
-  test("Enterprise page has title'", async () => {
-    const title = await page.title();
-    expect(title).toEqual('Enterprise · A smarter way to work together · GitHub');
-  }, 5000);
-});
+test("Sponsors page has title'", async () => {
+  await page.goto("https://github.com/sponsors");
+  const title = await page.title();
+  expect(title).toEqual('GitHub Sponsors · GitHub');
+}, 5000);
 
-describe("Github Sponsors page tests", () => {
-    beforeEach(async () => {
-        await page.goto("https://github.com/sponsors");
-    }, 10000);
-
-  test("Sponsors page has title'", async () => {
-    const title = await page.title();
-    expect(title).toEqual('GitHub Sponsors · GitHub');
-  }, 5000);
-});
-
-describe("Github Pricing page tests", () => {
-    beforeEach(async () => {
-        await page.goto("https://github.com/pricing");
-    }, 10000);
-
-  test("Pricing page has title'", async () => {
-    const title = await page.title();
-    expect(title).toEqual('Pricing · Plans for every developer · GitHub');
-  }, 5000);
-});
+test("Pricing page has title'", async () => {
+  await page.goto("https://github.com/pricing");
+  const title = await page.title();
+  expect(title).toEqual('Pricing · Plans for every developer · GitHub');
+}, 5000);
