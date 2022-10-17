@@ -4,7 +4,7 @@
   "description": "WIAT 7-4 Homework - Jest + Puppeteer",
   "main": "gh.test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/alexkochutov/WIAT-7-4/issues"
   },
-  "homepage": "https://github.com/alexkochutov/WIAT-7-4#readme"
+  "homepage": "https://github.com/alexkochutov/WIAT-7-4#readme",
+  "dependencies": {
+    "jest": "^29.2.0",
+    "jest-puppeteer": "^6.1.1",
+    "puppeteer": "^19.0.0"
+  }
 }
