@@ -14,6 +14,7 @@ describe("Github page tests", () => {
     const firstLink = await page.$("header div div a");
     await firstLink.click();
     await page.waitForSelector('h1');
+    await page.waitForTimeout(1000);
     const title2 = await page.title();
     expect(title2).toEqual('GitHub: Where the world builds software · GitHub');
   });
@@ -24,7 +25,7 @@ describe("Github page tests", () => {
   });
 
   test("The page contains Sign in button", async () => {
-    const btnSelector = ".btn-large-mktg.btn-mktg";
+    const btnSelector = ".btn-mktg.btn-large-mktg.btn-muted-mktg";
     await page.waitForSelector(btnSelector, {
       visible: true,
     });
